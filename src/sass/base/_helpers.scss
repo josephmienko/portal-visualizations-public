@@ -1,0 +1,21 @@
+/**
+ * HELPERS
+ *
+ * Mixins and partials to help everything run smoothly.
+ */
+
+// Add percentage of white to a color
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+
+// Default style for spaghetti plot filters
+@mixin filter-off() {
+	color: $text;
+	background: $light-gray;
+}

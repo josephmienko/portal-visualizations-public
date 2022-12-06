@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+var shell = require('shelljs');
+var content = require('./projects.js');
+
+shell.exec('rm -rf public/content'); // In case something is already there
+shell.exec('mkdir public/content');
+
+// Iterate over projects and add them as subtrees to the content folder
+for(var key in content) {
+	if(content.hasOwnProperty(key)) {
+		var shortName = content[key];
+		shell.exec('git remote add ' + shortName + ' https://github.com/cssat/' + key + '.git');
+		shell.exec('git add . && git commit -m "Adding remote for ' + shortName + '"');
+		shell.exec('git subtree add --prefix=public/content/' + shortName + '/ ' + shortName + ' master');
+	}
+}
+
+// Build CSS, JavaScript and image assets for the first time
+shell.exec('echo content added, building assets...');
+shell.exec('gulp');

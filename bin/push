@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+var shell = require('shelljs');
+var prompt = require('prompt');
+var content = require('./projects.js');
+
+// Start the prompt so that we can get push data
+prompt.start();
+
+// Get user input as to subtree and branch to be pushed
+prompt.get(['subtree', 'branchname'], function(err, result) {
+	var subtree = result.subtree;
+	var branch = result.branchname;
+	shell.exec('git subtree push --prefix=public/content/' + subtree + ' ' + subtree + ' ' + branch);
+});
+

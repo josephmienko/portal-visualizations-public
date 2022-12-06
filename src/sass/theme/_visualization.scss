@@ -1,0 +1,351 @@
+/*
+ *  VISUALIZATION
+ *
+ *  Styles for the graph container body. These styles apply to
+ *  all visualizations except where overridden by a visualization-specific 
+ *  stylesheet.
+ */
+
+#data-title {
+	padding-bottom: 2rem;
+	padding-left: 25px;
+
+	h2 {
+		font-size: 2.5rem;
+		font-weight: 700;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+	}
+}
+
+.tabs {
+	background: #f5f5f5;
+}
+
+.tabs .text {
+	display: none;
+}
+
+.row .tab-body.col {
+	padding-left: 0;
+	padding-top: 1rem;
+	border-top: 1px solid #ddd;
+}
+
+.header.row {
+	margin-bottom: 0;
+	background: #f5f5f5;
+}
+
+.google-visualization-table {
+	margin: 0 auto;
+}
+
+.tab-body .container {
+	padding: 2rem 0;
+
+	h2 {
+		padding-bottom: 1rem;
+		font-size: 2.5rem;
+	}
+}
+
+.tab .fa {
+	padding-right: 10px;
+}
+
+.config-type-dynamicDateRange {
+	padding-bottom: 15px;
+}
+
+#filters p.slider {
+	padding: 0 0 1rem 1rem;
+	font-size: 12px;
+	height: auto;
+}
+
+#filters div.slider {
+  margin: 5px 25px 0 15px;
+  height: 5px;
+  width: auto;
+  position: relative;
+  background: #ddd;
+}
+
+.ui-slider-range {
+  height: 100%;
+  width: 98%;
+}
+
+.ui-slider-handle {
+  background: $pink;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: -5px;
+}
+
+#chartContainer {
+	position: relative;
+}
+
+#chart {
+	min-height: 1px;
+}
+
+#chartContainer .row {
+	margin-bottom: 0;
+	padding-top: 0;
+}
+
+#updateLoader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $white;
+
+	.preloader-wrapper {
+		margin-left: 50%;
+		margin-top: 200px;
+	}
+}
+
+#loadMsg {
+	position: absolute;
+	top: 10%;
+	left: 5%;
+	max-width: 60%;
+}
+
+@media #{$large-and-up}{
+
+ 	.visualization-page {
+ 		margin-left: 240px; // Offset to make space for side nav
+ 		overflow-x: hidden;
+ 	}
+
+ 	.tab .text {
+ 		display: inline;
+ 	}
+}
+
+/***************
+  LEGEND
+ **************/
+
+ #chartLegend {
+ 	font-size: .85rem;
+ 	position: relative;
+
+ 	&:after {
+ 		@include bottom-fade(#fff);
+ 	}
+
+ 	#chartLegendInner {
+ 		height: 350px;
+	    max-height: 350px;
+	 	position: relative;
+	 	overflow: auto;
+	 	margin-bottom: 20px;
+ 	}
+
+ 	// Apparently there is a header row that goes unused
+ 	.row0 {
+ 		display: none;
+ 	}
+ }
+
+#data-legend h3 {
+    padding-bottom: 2rem;
+    font-weight: 700;
+}
+
+ #dbUpdated {
+ 	font-weight: bold;
+ 	padding-top: 15px;
+ }
+
+ #js-share {
+ 	margin-top: 20px;
+ }
+
+ // Share modal styling
+ #share {
+ 	text-align: center;
+
+ 	h4 {
+ 		padding-bottom: 1rem;
+ 	}
+
+ 	ul li {
+ 		display: inline-block;
+ 		margin-right: 10px;
+
+ 		a {
+ 			box-shadow: none;
+ 		}
+ 	}
+ }
+
+/*****************
+   TABLE
+******************/
+
+#tableChart {
+	position: relative;
+
+	&:after {
+ 		@include bottom-fade(#fff);
+ 	}
+}
+
+.tableChart-header {
+	background: #fff;
+}
+
+.tableChart-header .google-visualization-table-th {
+	border: 0;
+	padding: 10px 5px;
+}
+
+.tableChart-even,
+.tableChart-odd {
+
+	.google-visualization-table-td {
+		border: 0;
+		padding: 10px 5px;
+	}
+}
+
+#tableChart .google-visualization-table-tr-over,
+#tableChart .google-visualization-table-tr-sel {
+	background: lighten($pink, 20%);
+}
+
+.tableChart-even {
+	background: #f5f5f5;
+}
+
+/****************
+   ABOUT
+****************/
+
+#about {
+
+	h2 {
+		margin-bottom: 0;
+	}
+
+	h4 {
+		text-transform: uppercase;
+		font-size: 1rem;
+		font-weight: 700;
+		margin: 2rem 0 0 0;
+	}
+
+	p {
+		font-size: 18px;
+	}
+
+	.stat {
+		text-align: center;
+
+		h4 {
+			font-size: 14px;
+			color: $medium-gray;
+			margin-top: 1rem;
+		}	
+
+		p {
+			color: $pink;
+			font-size: 18px;
+			padding-top: 0;
+			margin-top: 10px;
+		}
+	}
+
+	h3 {
+		font-size: 28px;
+		font-weight: 700;
+		clear: left;
+		margin-top: 2.5rem;
+		text-transform: none;
+
+		&.highlights-label {
+			font-size: 18px;
+			font-weight: 700;
+			color: $text;
+			text-transform: uppercase;
+			text-align: center;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.tab-body .container {
+		max-width: 900px;
+
+		ul li {
+			list-style-type: disc;
+			margin-left: 30px;
+			font-size: 18px;
+		}
+
+		.col > p,
+		.col > ul,
+		.col > ol {
+			max-width: 66%;
+		}
+
+		.stat,
+		.highlights-label {
+			width: 33%;
+			float: right;
+			clear: right;
+			padding-left: 50px;
+		}
+	}
+}
+/****************
+  CITATION
+****************/
+
+#downloads p {
+	font-size: 18px;
+	margin-bottom: 2rem;
+}
+
+#citation-example {
+	padding-left: 15px;
+	color: #777;
+	border-left: 5px solid #dedede;
+}
+
+.tags {
+	padding: 15px 25px;
+}
+
+#data-select {
+	padding: 1rem 0;
+
+	label {
+		color: color('grey', 'lighten-3');
+		font-size: 1rem;
+		font-weight: 300;
+		padding-bottom: .5rem;
+		display: inline-block;
+	}
+}
+
+/*******************
+   SHARE
+*******************/
+
+#short-url {
+	font-size: 22px;
+}

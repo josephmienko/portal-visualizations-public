@@ -1,0 +1,145 @@
+/*
+ *  SIDEBAR
+ */
+
+// See components/color for color variables
+
+/********************
+   BASIC LAYOUT
+********************/
+.side-nav {
+	background: $blue-darken-1;
+	color: color("grey", 'lighten-3');
+}
+
+.side-nav.fixed .filters-header {
+	background: $poc-blue;
+	color: color("grey", 'lighten-3');
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	height: 64px;
+	line-height: 64px;
+	display: block;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+// Default to closed filter categories. A class of 'open' is added when one of the
+// fieldsets in the filter category is used by the current graph.
+
+.filter {
+	display: none;
+
+	&.open {
+		display: block;
+	}
+}
+
+// Set up basic styles for top-level elements
+
+.filter-buttons.row {
+	text-align: center;
+	padding: 1.5rem 0;
+	margin-bottom: 0;
+	border-bottom: 1px solid $poc-blue;
+
+	.btn {
+		padding: 0;
+		width: 45%;
+		margin-bottom: 1rem;
+	}
+}
+
+.side-nav .collapsible-header {
+ 	padding: 1rem .75rem;
+ 	margin: 0;
+}
+
+.side-nav .collapsible-header,
+.side-nav.fixed a {
+	font-weight: 300;
+	border-bottom: 1px solid $poc-blue;
+	color: color("grey", 'lighten-3');
+
+	&.active,
+	&:hover {
+		background: $poc-blue;
+	}
+}
+
+.side-nav .collapsible-header i {
+	line-height: .85;
+	margin-right: .5rem;
+}
+
+.side-nav.fixed a  {
+	cursor: pointer;
+	border: 0;
+	text-align: center;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+// Second-level elements
+
+.side-nav .collapsible-body {
+  	background: $blue-darken-2;
+}
+
+.fieldset {
+
+	&.showHide-show .fieldsetHeader {
+		margin-bottom: 1rem;
+		background: $blue-darken-1;
+	}
+
+	.fieldsetHeader {
+	 	text-transform: uppercase;
+	 	padding: 1rem 0 1rem 3.3rem;
+	 	border-top: 1px solid $blue-darken-1;
+
+	 	&:hover {
+	 		cursor: pointer;
+	 		color: #fff;
+	 		background: $blue-darken-1;
+	 	}
+	 }
+
+	 >div.fieldInput,
+	 >div.fieldInputAll {
+	 	padding: 0px 15px 10px 15px;
+	 }
+}
+
+.side-nav {
+	input[type="checkbox"]+label:before {
+	 	border: 2px solid $white;
+	 }
+
+	 input[type="checkbox"]:checked 
+	  + label:before {
+	  	border-right-color: $white;
+	  	border-bottom-color: $white;
+	  	border-top-color: transparent;
+    	border-left-color: transparent;
+	  }
+
+	 label {
+	 	color: $white;
+	 	font-size: .9rem;
+	 	font-weight: 300;
+	 }
+}
+
+// Modal for filter definitions
+
+#filter-help {
+
+	dt {
+		padding: 15px 0 5px 0;
+		line-spacing: 3px;
+		text-transform: uppercase;
+	}
+}

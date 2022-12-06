@@ -1,0 +1,213 @@
+/**
+ * Spaghetti
+ */
+
+.national-trends {
+
+    // Filter styles
+
+    .side-nav li {
+        margin: 15px;
+
+        &:hover {
+            background: none;
+        }
+    }
+
+    .side-nav.fixed a {
+        cursor: pointer;
+        border: 0;
+        text-align: center;
+        font-weight: 600;
+
+        &:hover {
+            color: $off-white;
+            text-decoration: none;
+        }
+
+        &.filters-header {
+            color: $off-white;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+
+        &#FW {
+            @include filter-off;
+
+            &:hover, &.FW {
+                background: $red;
+                color: $off-white;
+            }
+        }
+
+        &#MT {
+            @include filter-off;
+
+            &:hover, &.MT {
+                background: $turquoise;
+                color: $off-white;
+            }
+        }
+
+        &#SW {
+            @include filter-off;
+
+            &:hover, &.SW {
+                background: $orange;
+                color: $off-white;
+            }
+        }
+
+        &#GP {
+            @include filter-off;
+
+            &:hover, &.GP {
+                background: $purple;
+                color: $off-white;
+            }
+        }
+
+        &#GL {
+            @include filter-off;
+
+            &:hover, &.GL {
+                background: $blue;
+                color: $off-white;
+            }
+        }
+
+        &#SE {
+            @include filter-off;
+
+            &:hover, &.FW {
+                background: $green;
+                color: $off-white;
+            }
+        }
+
+        &#ME {
+            @include filter-off;
+
+            &:hover, &.ME {
+                background: $yellow;
+                color: $off-white;
+            }
+        }
+
+        &#NE {
+            @include filter-off;
+
+            &:hover, &.NE {
+                background: $vis-pink;
+                color: $off-white;
+            }
+        }
+    }
+
+    // Graph styles
+    #graph {
+    	padding: 25px;
+    }
+
+    path {
+        stroke: rgba(0, 0, 0, .1);
+        stroke-width: 2.0;
+        fill: none;
+       /* pointer-events: all; */
+       /* cursor: pointer;*/
+    }
+    path.current, path.highlight.current {
+        stroke: #000;
+        stroke-width: 2.0;
+    }
+
+    path[state="Washington"] {
+        stroke: #000;
+    }
+
+    .FW.highlight {
+      stroke: $red;
+    }
+    .SW.highlight {
+        stroke: $orange;
+    }
+    .ME.highlight {
+        stroke: $yellow;
+    }
+    .SE.highlight {
+        stroke: $green;
+    }
+    .MT.highlight {
+        stroke: $turquoise;
+    }
+    .GL.highlight {
+        stroke: $blue;
+    }
+    .GP.highlight {
+        stroke: $purple;
+    }
+    .NE.highlight {
+      stroke: $vis-pink;
+    }
+    .highlight {
+        stroke-width: 2px;
+    }
+    line {
+        stroke: black;
+    }
+    text {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 11px;
+    }
+    .axis {
+        stroke-width: 0.8;
+        stroke: #000;
+    }
+    .xTicks, .yTicks {
+        stroke-width: 0.6;
+        stroke: #000;
+    }
+
+    #ranking {
+        padding: 15px;
+    }
+
+    .tab-body .container h2 {
+        padding-bottom: 1rem;
+        font-size: 2.5rem;
+    }
+}
+
+
+/*******************
+       TABLE
+*******************/
+
+.national-trends {
+    #table table th {
+        cursor: pointer;
+
+        &:hover {
+            background: $off-white;
+        }
+
+        &.sorting_asc,
+        &.sorting_desc {
+            border-bottom: 2px solid $pink;
+        }
+    }
+
+    #tableContainer input[type=search] {
+        height: 2rem;
+    }
+
+    #tableContainer label {
+        font-size: .9rem;
+        text-transform: uppercase;
+    }
+
+    .dataTables_filter {
+        padding: 1.5rem 0;
+        max-width: 500px;
+    }
+}

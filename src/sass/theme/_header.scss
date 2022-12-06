@@ -1,0 +1,63 @@
+/* 
+ *  HEADER
+ *
+ */
+
+ nav {
+ 	background-color: #fff;
+ 	box-shadow: none;
+ }
+
+ nav ul a {
+ 	color: #444;
+ }
+
+ nav .nav-wrapper i {
+ 	display: inline-block;
+ }
+
+ nav .button-collapse i {
+ 	font-size: 2rem;
+ }
+
+ nav a.button-collapse {
+ 	color: #565656;
+ 	text-transform: uppercase;
+ 	letter-spacing: 3px;
+ 	font-size: 2rem;
+ }
+
+ a.brand-logo img {
+ 	width: 100%;
+ 	padding-top: 15px;
+ }
+
+ nav ul.right {
+ 	display: none;
+ }
+
+ nav ul li:hover, nav ul li.active {
+ 	background-color: #fff;
+ }
+
+ .tag.btn {
+ 	margin-right: 10px;
+ 	padding: 0 .75rem;
+
+ 	&:hover {
+ 		cursor: pointer;
+ 		background: #ccc!important;
+ 	}
+ }
+
+@media #{$large-and-up}{
+
+	nav ul.right {
+		display: block;
+		padding-right: 1rem;
+	}
+
+	 a.brand-logo {
+	 	margin-left: 255px;
+	 }
+}

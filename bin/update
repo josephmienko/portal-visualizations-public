@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+var shell = require('shelljs');
+var content = require('./projects.js');
+
+// First make sure that repo and content is up to date
+shell.exec('git pull');
+
+// Execute a git pull for each content repo
+for(var key in content) {
+	if(content.hasOwnProperty(key)) {
+		var dir = content[key];
+		shell.exec('echo updating ' + dir + '...');
+		shell.exec('cd public/content/' + dir);
+		shell.exec('git subtree pull --prefix=public/content/' + dir + ' ' + dir + ' master');
+	}
+	shell.exec('echo update done');
+}

@@ -1,0 +1,12 @@
+ <?php
+  return array(
+    'db' => [
+    'user' => 'annie',
+    'password' => '',
+    'dbname' => 'annie',
+    'host' => 'pocweb.cac.washington.edu'
+   ],
+   'configPath' => [
+     './content-data/content/graphs/'
+   ]
+ );

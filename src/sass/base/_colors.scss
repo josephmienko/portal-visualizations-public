@@ -1,0 +1,40 @@
+/*
+ * Colors
+ *
+ * Variables defining the current color scheme.
+ *
+ * Author: 
+ * Contact:
+ * Date Created:
+*/
+
+$black: #4d4d4d;
+$white: #fff;
+$off-white: #f5f5f5;
+$light-gray: #dedede;
+$medium-gray: #a9a9a9;
+$text: #565656;
+
+// Brand colors
+$poc-blue: #3a6f8f;
+$blue-darken-1: shade($poc-blue, 15%);
+$blue-darken-2: shade($poc-blue, 25%);
+$light-blue: #59aadb;
+$poc-green: #96c283;
+$dark-green: #74a35d;
+
+// Accent colors
+$teal: #5bb1b4;
+$dark-teal: #379093;
+$pink: #ee6e73;
+$dark-pink: #c6544b;
+
+// Visualization colors
+$red: #f44336;
+$turquoise: #00acc1;
+$orange: #fb8c00;
+$purple: #673ab7;
+$blue: #2196f3;
+$green: #4caf50;
+$yellow: #ffc107;
+$vis-pink: #d81b60;

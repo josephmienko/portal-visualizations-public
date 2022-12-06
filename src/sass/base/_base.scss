@@ -1,0 +1,25 @@
+/*
+ * Base Styles
+ *
+ * Global styles applied to top-level elements.
+ *
+ * Author: 
+ * Contact:
+ * Date Created:
+*/
+
+.inline li {
+	display: inline-block;
+}
+
+// Sticky footer support
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+ flex: 1 0 auto;
+}

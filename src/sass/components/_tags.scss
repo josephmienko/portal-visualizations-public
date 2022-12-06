@@ -1,0 +1,22 @@
+/**
+ * TAGS
+ *
+ */
+
+ 
+.tag {
+	display: inline-block;
+	background: $light-gray;
+	color: #777;
+	padding: .5rem;
+	margin-bottom: .5rem;
+	margin-right: .5rem;
+	border-radius: 2px;
+	cursor: pointer;
+
+	&.active,
+	&:hover {
+		color: $white;
+		background: $pink;
+	}
+}

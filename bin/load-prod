@@ -1,0 +1,24 @@
+#!/bin/sh
+
+base=/data/pocweb/data-portal
+dir_vis=$base/portal-visualizations
+dir_browse=$base/portal-browse
+dir_vis_content=$dir_vis/public/content-data
+dir_browse_content=$dir_browse/public/content-data
+
+branch='master'
+if [ $# -eq 1 ]; then
+    branch=$1
+    featureIndex=`expr $branch : feature/`
+    if [ $featureIndex -eq 0 ]; then
+        branch=feature/$branch
+    fi
+fi
+
+cd $dir_vis && echo -n "Updating " && pwd && git pull && git checkout $branch
+
+cd $dir_browse && echo -n "Updating " && pwd && git pull && git checkout $branch
+
+cd $dir_vis_content && echo -n "Updating " && pwd && git pull && git checkout $branch
+
+cd $dir_browse_content && echo -n "Updating " && pwd && git pull && git checkout $branch

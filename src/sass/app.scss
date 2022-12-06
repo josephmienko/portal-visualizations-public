@@ -1,0 +1,31 @@
+/*
+ * APP
+ */
+
+@import 'materialize';
+
+
+/* Project base settings */
+@import 'base/helpers';
+@import 'base/grid';
+@import 'base/colors';
+@import 'base/typography';
+@import 'base/base';
+
+/* Specific modified elements as needed */
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/dropdown';
+@import 'components/form';
+@import 'components/navbar';
+@import 'components/tabs';
+@import 'components/tags';
+
+/* Theme stylesheets for specific pages and page areas */
+@import 'theme/base';
+@import 'theme/header';
+@import 'theme/sidebar';
+@import 'theme/visualization';
+@import 'theme/map';
+@import 'theme/spaghetti';
+@import 'theme/footer';
